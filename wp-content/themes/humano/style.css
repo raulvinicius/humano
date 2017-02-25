@@ -873,9 +873,29 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	body header #menu.inner hgroup a,
 	body header #menu.inner.flutua hgroup a
 	{
-		background: url(img/humano-logo-767.png) no-repeat center;
 		width: 66px;
 		height: 65px;
+	}
+
+	body header #menu hgroup a svg,
+	body header #menu.inner.flutua hgroup a svg
+	{
+		width: 140px;
+		display: block;
+		margin-top: 15px;
+		margin-left: 15px;
+	}
+
+	body header #menu hgroup a .st0,
+	body header #menu.inner.flutua hgroup a .st0
+	{
+		fill: white;
+	}
+
+	body header #menu hgroup a .st1,
+	body header #menu hgroup a .st2
+	{
+		fill-opacity: 0;
 	}
 
 	body header #menu ul
@@ -1009,6 +1029,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 	/*---------------------PROJETOS---------------------*/
+
+	body #pagina-projetos .filtro a
+	{
+		font-size: ;
+	}
 
 	body #pagina-projetos ul li figure:before
 	{
@@ -1288,12 +1313,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	{
 		width: 160px;
 		height: 42px;
-		background: url(img/humano-logo-home-991.png) no-repeat left center;
-	}
-	
-	body header #menu.inner hgroup a
-	{
-		background: url(img/humano-logo-home-991-color.png) no-repeat left center;
 	}
 	
 	/*---------------------MENU---------------------*/
@@ -2062,23 +2081,52 @@ header #menu.inner.flutua hgroup a
 	width: 212px;
 	height: 55px;
 	text-indent: -9999px;
-	background: url(img/humano-logo-home.png) no-repeat left center;
+	/*background: url(img/humano-logo-home.png) no-repeat left center;*/
 }
 
-header #menu.inner hgroup a
+header #menu hgroup a svg
 {
-	background: url(img/humano-logo-home-color.png) no-repeat left center;
+	vertical-align: baseline;
+	height: auto;
 }
 
-header #menu.inner.flutua hgroup a
+header #menu hgroup a svg .st0,
+header #menu hgroup a svg .st1,
+header #menu hgroup a svg .st2
 {
-	background: url(img/humano-logo-home-991.png) no-repeat left center;
+	fill: white;
+}
+
+header #menu.inner hgroup a svg .st0,
+header #menu.inner hgroup a svg .st2
+{
+	fill: #F57E20;
+}
+
+header #menu.inner hgroup a svg .st1
+{
+	fill: #2a2a2a;
+}
+
+header #menu.inner hgroup svg
+{
+	margin-top: 5px;
+	width: 80%;
+}
+
+header #menu.inner.flutua hgroup a .st0,
+header #menu.inner.flutua hgroup a .st1,
+header #menu.inner.flutua hgroup a .st2
+{
+	fill: #eee;
 }
 
 header #menu hgroup a h1,
 header #menu hgroup a h2
 {
 	margin: 0;
+	padding: 0;
+	height: 0;
 }
 
 header #menu ul
@@ -2594,6 +2642,62 @@ header #menu ul li a:link
 {
 	position: relative;
 	z-index: 1;
+}
+
+#pagina-projetos .filtro
+{
+	background: white;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+#pagina-projetos .filtro a
+{
+	position: relative;
+	font-family: 'brandon-light'; 
+	text-transform: uppercase;
+	background: none;
+	border: none;
+	outline: none;
+	padding: 30px;
+	vertical-align: top;
+	font-size: 18px;
+	color: #999;
+	display: inline-block;
+}
+
+#pagina-projetos .filtro a:after
+{
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 25px;
+	right: 50%;
+	left: 50%;
+	height: 1px;
+	background: #e55819;
+
+	-webkit-transition: 0.2s all cubic-bezier(0.34, 0, 0, 1);
+	-moz-transition: 0.2s all cubic-bezier(0.34, 0, 0, 1);
+	-o-transition: 0.2s all cubic-bezier(0.34, 0, 0, 1);
+	-ms-transition: 0.2s all cubic-bezier(0.34, 0, 0, 1);
+	transition: 0.2s all cubic-bezier(0.34, 0, 0, 1);
+}
+
+#pagina-projetos .filtro a:hover,
+#pagina-projetos .filtro a:focus,
+#pagina-projetos .filtro a.selected
+{
+	color: #e55819;
+	text-decoration: none;
+}
+
+#pagina-projetos .filtro a:hover:after,
+#pagina-projetos .filtro a.selected:after
+{
+	right: 20px;
+	left: 20px;
 }
 
 #pagina-projetos ul

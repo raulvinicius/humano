@@ -208,6 +208,33 @@ $(document).ready(function() {
 	//-----------------CAROUSEL HOME-----------------//
 
 
+	//-----------------PROJETOS-----------------//
+
+	//FILTRO
+	console.log(window.location.hash);
+
+	$(window).on('hashchange', function(event) {
+
+
+		hash = window.location.hash;
+		hash = hash.substring(1, hash.length);
+		if(hash != '')
+		{
+			$('#pagina-projetos .filtro a').removeClass('selected');
+			$('#pagina-projetos .filtro a.' + hash).addClass('selected');
+
+			$('#pagina-projetos #lista-projetos li').hide();
+			$('#pagina-projetos #lista-projetos li.' + hash).show();
+		}
+
+	});
+
+	$( window ).trigger('hashchange');
+
+
+	//-----------------PROJETOS-----------------//
+
+
 	//-----------------CONTATO-----------------//
 
 	$('.auto-resize').on('keydown', function ()

@@ -7,6 +7,16 @@
 	<section id="projetos">
 
 		<div class="container-fluid">
+			<div class="row filtro">
+				<div class="container">
+					<div class="row">
+						<a href="<?php bloginfo('url') ?>/projetos/" class="ani-04 selected">Todos</a>
+						<a href="<?php bloginfo('url') ?>/projetos/#design-interativo" class="ani-04 design-interativo">Design Interativo</a>
+						<a href="<?php bloginfo('url') ?>/projetos/#design-grafico" class="ani-04 design-grafico">Design Gráfico</a>
+						<a href="<?php bloginfo('url') ?>/projetos/#branding" class="ani-04 branding">Branding</a>
+					</div>
+				</div>
+			</div>
 			<div class="row">
 				<ul id="lista-projetos">
 
@@ -19,13 +29,14 @@
 
 						$objServico = get_field_object('servico_principal');
 						$servico = get_field('servico_principal');
+						$slugServico = $servico;
 						$servico = $objServico['choices'][$servico];
 						$miniCapa = get_field('mini_capa');
 						$miniCapa = wp_get_attachment_image_src($miniCapa, 'full');
 
 						?>
 
-						<li class="col-md-3 col-sm-6">
+						<li class="col-md-3 col-sm-6 <?php echo $slugServico ?>">
 							<a href="<?php the_permalink(); ?>">
 								<article>
 									<figure>

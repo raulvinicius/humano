@@ -4,4 +4,5 @@
 User-agent: *
 Disallow: /wp-admin/
 Disallow: /noahost/
+Disallow: /wpplugins/
 
